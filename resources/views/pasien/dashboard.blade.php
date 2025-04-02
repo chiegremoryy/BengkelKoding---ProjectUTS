@@ -44,9 +44,6 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="index3.html" class="nav-link">Home</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
     </ul>
 
     <!-- Right navbar links -->
@@ -222,15 +219,6 @@
               <i class="nav-icon fas fa-search"></i>
               <p>
                 Periksa
-                <span class="right badge badge-danger">New</span>
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{ route('riwayatPasien') }}" class="nav-link">
-              <i class="nav-icon fas fa-history"></i>
-              <p>
-                Riwayat
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>

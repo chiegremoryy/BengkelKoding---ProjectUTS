@@ -44,9 +44,6 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="index3.html" class="nav-link">Home</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
     </ul>
 
     <!-- Right navbar links -->
@@ -297,7 +294,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Riwayat Periksa</h3>
+                <h3 class="card-title">Daftar Obat</h3>
 
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
@@ -317,7 +314,6 @@
                   <thead>
                     <tr>
                       <th>#</th>
-                      <th>ID Periksa</th>
                       <th>Nama Obat</th>
                       <th>Kemasan</th>
                       <th>Harga</th>
@@ -327,7 +323,6 @@
                   <tbody>
                     <tr>
                         <td>1</td>
-                        <td>P01</td>
                         <td>Ranitidine</td>
                         <td>Tablet</td>
                         <td>110000.</td>
@@ -338,7 +333,6 @@
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>P02</td>
                         <td>Metformin</td>
                         <td>Dus</td>
                         <td>200000.</td>
@@ -349,7 +343,6 @@
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>P03</td>
                         <td>Simvastatin</td>
                         <td>Strip</td>
                         <td>95000.</td>
@@ -360,7 +353,6 @@
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>P04</td>
                         <td>Paracetamol</td>
                         <td>Tablet</td>
                         <td>125000.</td>
@@ -371,7 +363,6 @@
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>P05</td>
                         <td>Omeprazole</td>
                         <td>Botol</td>
                         <td>175000.</td>
