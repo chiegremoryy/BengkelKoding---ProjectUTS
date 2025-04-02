@@ -16,8 +16,4 @@ class PasienController extends Controller
         return view('pasien.periksa');
     }
 
-    public function showRiwayat()
-    {
-        return view('pasien.riwayat');
-    }
 }

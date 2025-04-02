@@ -18,7 +18,6 @@ Route::post('/register', [AuthController::class, 'register']);
 //routes untuk role pasien
 Route::get('/pasien', [PasienController::class, 'index'])->name('dashboardPasien');
 Route::get('/pasien/periksa', [PasienController::class, 'showPeriksa'])->name('periksaPasien');
-Route::get('/pasien/riwayat', [PasienController::class, 'showRiwayat'])->name('riwayatPasien');
 
 //routes untuk role dokter
 Route::get('/dokter', [DokterController::class, 'index'])->name('dashboardDokter');
