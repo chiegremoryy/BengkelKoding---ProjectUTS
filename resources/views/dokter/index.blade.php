@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Pasien | Dashboard')
+@section('title', 'Dokter | Dashboard')
 
 @section('nav-item')
-@include('pasien.components.navbar')
+@include('dokter.components.navbar')
 @endsection
 
 @section('content')
@@ -12,7 +12,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Dashboard Pasien</h1>
+                <h1 class="m-0">Dashboard Dokter</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
