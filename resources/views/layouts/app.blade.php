@@ -97,17 +97,16 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+                        with font-awesome or any other icon font library -->
                         @yield('nav-item')
                         <li class="nav-item">
-                            <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                <i class="nav-icon fas fa-solid fa-arrow-right-from-bracket"></i>
-                                <p>Logout</p>
-                            </a>
-
-                            <form action="/logout" method="POST" class="d-none" id="logout-form">
-                                @csrf
-                            </form>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="nav-link btn btn-link" style="color: inherit; text-align: left;">
+                            <i class="nav-icon fas fa-sign-out-alt"></i>
+                            <p>Logout</p>
+                            </button>
+                        </form>
                         </li>
                     </ul>
                 </nav>
@@ -122,10 +121,10 @@
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">ChieMedical</a>.</strong>
+            <strong>Copyright &copy; 2025 <a href="https://adminlte.io">ChieMedical</a>.</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.2.0
+                <b>Jawa</b>Inc. 
             </div>
         </footer>
 

@@ -66,4 +66,14 @@ class AuthController extends Controller
         toastr()->success('Pendaftaran berhasil, silakan login');
         return redirect()->route('login');
     }
+
+    public function logout(Request $request)
+    {
+        \Log::info('Logout dipanggil');
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/login');
+    }
+
 }
