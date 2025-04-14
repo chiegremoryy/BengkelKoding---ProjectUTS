@@ -38,7 +38,7 @@
 
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="{{ asset('lte/dist/img/AdminLTELogo.png') }}" alt="AdminLTELogo"
+            <img class="animation__shake" src="{{ asset('lte\dist\img\logo-chie-medical.png') }}" alt="AdminLTELogo"
                 height="60" width="60">
         </div>
 
@@ -61,8 +61,8 @@
         <aside class="main-sidebar sidebar-blue-primary elevation-4">
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
-                    <!-- <img src="{{ asset('lte/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
-                    class="brand-image img-circle elevation-3" style="opacity: .8"> -->
+                    <img src="{{ asset('lte\dist\img\logo-chie-medical.png') }}" alt="ChieMedical Logo"
+                    class="brand-image img-circle elevation-1" style="opacity: 1">
                 <span class="brand-text font-weight-bold">ChieMedical</span>
             </a>
 
@@ -120,20 +120,22 @@
             @yield('content')
         </div>
         <!-- /.content-wrapper -->
+
+        <!-- Main Footer -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2025 <a href="https://adminlte.io">ChieMedical</a>.</strong>
+            @yield('footer')
+            <strong>&copy; 2025 <a href="https://adminlte.io">ChieMedical</a>.</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
-                <b>Jawa</b>Inc. 
-            </div>
+                <b>Jawa</b>.Inc
+            </div>  
         </footer>
-
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
             <!-- Control sidebar content goes here -->
         </aside>
         <!-- /.control-sidebar -->
-    </div>
+        </div>
     <!-- ./wrapper -->
 
     <!-- jQuery -->

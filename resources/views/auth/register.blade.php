@@ -13,16 +13,47 @@
   <link rel="stylesheet" href="{{ asset('lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('lte/dist/css/adminlte.min.css') }}">
+  <style>
+    body {
+    background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    }
+    .login-box {
+      max-width: 420px;
+      margin: 10% auto;
+    }
+    .login-card-body {
+      border-radius: 10px;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    }
+    .login-logo img {
+      height: 80px;
+      margin-bottom: 10px;
+    }
+    .form-control {
+      border-radius: 5px;
+    }
+    .btn-primary {
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
+    <img src="{{ asset('lte/dist/img/logo-chie-medical.png') }}" alt="ChieMedical Logo" style="height: 80px;">
+    <br>
     <a href="#"><b>Chie</b>Medical</a>
   </div>
 
   <div class="card">
     <div class="card-body register-card-body">
-      <p class="login-box-msg">Register a New Patient</p>
+      <p class="login-box-msg">Join us! Create an account to start your seamless healthcare journey.</p>
 
       <form action="register" method="post">
         @csrf

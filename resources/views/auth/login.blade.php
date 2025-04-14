@@ -13,25 +13,60 @@
   <link rel="stylesheet" href="{{ asset('lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('lte/dist/css/adminlte.min.css') }}">
+
+  <style>
+    body {
+    background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    }
+    .login-box {
+      max-width: 420px;
+      margin: 10% auto;
+    }
+    .login-card-body {
+      border-radius: 10px;
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    }
+    .login-logo img {
+      height: 80px;
+      margin-bottom: 10px;
+    }
+    .form-control {
+      border-radius: 5px;
+    }
+    .btn-primary {
+      border-radius: 10px;
+    }
+  </style>
 </head>
+
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
+    <img src="{{ asset('lte/dist/img/logo-chie-medical.png') }}" alt="ChieMedical Logo">
+    <br>
     <a href="#"><b>Chie</b>Medical</a>
   </div>
   <!-- /.login-logo -->
+
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Welcome back! Log in to continue your seamless healthcare experience.</p>
 
-      <form action="login" method="post">
+      <form action="{{ route('login') }}" method="post">
         @csrf
+
         <div class="form-group">
           <label for="email">Email</label>
           <div class="input-group">
-            <input id="email" name="email" type="email" class="form-control" placeholder="Email">
+            <input id="email" name="email" type="email" class="form-control" placeholder="Email" required autofocus>
             <div class="input-group-append">
-              <div class="input-group-text">
+              <div class="input-group-text rounded-right">
                 <span class="fas fa-envelope"></span>
               </div>
             </div>
@@ -41,9 +76,9 @@
         <div class="form-group">
           <label for="password">Password</label>
           <div class="input-group">
-            <input id="password" name="password" type="password" class="form-control" placeholder="Password">
+            <input id="password" name="password" type="password" class="form-control" placeholder="Password" required>
             <div class="input-group-append">
-              <div class="input-group-text">
+              <div class="input-group-text rounded-right">
                 <span class="fas fa-lock"></span>
               </div>
             </div>
