@@ -17,7 +17,7 @@ class roleHandler
     {
         $user = Auth::user();
         if ($user->role !== $role) {
-            return response('Authorization Denied | Eitss mau ngapain tugh?!', 403);
+            return response()->view('errors.403', [], 403);
         }
         return $next($request);
         
