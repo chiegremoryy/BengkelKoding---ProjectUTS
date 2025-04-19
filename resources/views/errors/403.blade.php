@@ -15,6 +15,11 @@
             max-width: 550px;
             height: auto;
         }
+
+        h3 {
+            color: #4a148c;
+        }
+        
         p {
             font-size: 18px;
             color: #555;
@@ -23,7 +28,7 @@
 </head>
 <body>
     <img src="{{ asset('lte\dist\img\not-found.png') }}" alt="Unauthorized Access">
-    <h3>Whoops! Anda Tidak Punya Akses! </h3>
+    <h3>Whoops! Anda Tidak Punya Akses!</h3>
     <p>Authorization Denied!🚫</p>
 </body>
 </html>
