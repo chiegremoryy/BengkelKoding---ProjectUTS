@@ -381,16 +381,8 @@
     </div>
 
     <div class="auth-links">
-      @if (Route::has('login'))
-        @auth
-          <a href="{{ url('/dashboard') }}">Dashboard</a>
-        @else
-          <a href="{{ route('login') }}">Login</a>
-          @if (Route::has('register'))
-            <a href="{{ route('register') }}">Register</a>
-          @endif
-        @endauth
-      @endif
+        <a href="{{ route('login') }}">Login</a>
+        <a href="{{ route('register') }}">Register</a>
     </div>
   </header>
 
