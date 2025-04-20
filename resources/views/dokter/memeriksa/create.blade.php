@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-<!-- Content Header (Page header) -->
+
 <div class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
@@ -16,16 +16,14 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="{{ url('/dokter/dashboard') }}">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url('/dokter/dashboard') }}">Dokter</a></li>
                     <li class="breadcrumb-item active">Memeriksa</li>
                 </ol>
             </div>
         </div>
     </div>
 </div>
-<!-- /.content-header -->
 
-<!-- Main content -->
 <section class="content">
     <div class="container-fluid">
         <div class="card card-primary">
@@ -47,11 +45,11 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $item->pasien->nama }}</td>
-                            <td>{{ $item->biaya_periksa }}</td>
+                            <td>Rp {{ number_format($item->biaya_periksa, 0, ',', '.') }}</td>
                             <td>
-                                <a href="{{ url('/dokter/memeriksa/' . $item->id . '/edit') }}" class="btn btn-sm btn-primary">
-                                    Lanjut Periksa
-                                </a>
+                            <a href="{{ url('/dokter/memeriksa/' . $item->id . '/edit') }}" class="btn btn-sm btn-primary">
+                                <i class="fa-solid fa-signature"></i> Lanjut Pemeriksaan
+                            </a>
                             </td>
                         </tr>
                         @empty

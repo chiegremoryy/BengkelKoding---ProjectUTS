@@ -14,8 +14,7 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bootstrap 4 -->
-    <link rel="stylesheet"
-        href="{{ asset('lte\plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('lte\plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
     <!-- iCheck -->
     <link rel="stylesheet" href="{{ asset('lte\plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
     <!-- JQVMap -->
@@ -30,45 +29,95 @@
     <link rel="stylesheet" href="{{ asset('lte\plugins/summernote/summernote-bs4.min.css') }}">
     {{-- CDN FontAwesome --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" href="{{ asset('public/lte/dist/img/logo-chie-medical.png') }}" type="image/png">
+    <link rel="icon" href="{{ asset('logo-chie-medical.png') }}" type="image/png">
+
     @stack('styles')
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        }
+        .nav-link {
+        color: #4a148c !important;
+        transition: all 0.2s ease-in-out;
+        }
+        .nav-sidebar .nav-link.active {
+        background-color: #4a148c !important;
+        color: white !important;
+        font-weight: 500;
+        border-radius: 5px;
+        }
+        .nav-sidebar .nav-link:hover {
+        background-color: rgba(74, 20, 140, 0.1);
+        color: #4a148c;
+        font-weight: 600;
+        border-radius: 5px;
+        }
+        .card-primary {
+        color: #4a148c !important;
+        }
+        .card-primary .card-header {
+        background-color: #4a148c !important;
+        color: white !important;
+        }
+        .card-primary .card-header h3 {
+        font-weight: 500;
+        }
+        .btn-primary {
+        background-color: #4a148c;
+        border-color: #4a148c;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+        background-color: #6a1b9a;
+        border-color: #6a1b9a;
+        }
+        .btn-secondary {
+        background-color: #6c757d;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+        }
+        .btn-secondary:hover {
+        background-color: #5a6268;
+        }
+        p {
+        font-size: 15px;
+        }
+        a {
+        color: #4a148c;
+        }
+    </style>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
 
-        <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
             <img class="animation__shake" src="{{ asset('lte\dist\img\logo-chie-medical.png') }}" alt="AdminLTELogo"
                 height="60" width="60">
         </div>
 
-        <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
                             class="fas fa-bars"></i></a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">Home</a>
-                </li>
             </ul>
         </nav>
-        <!-- /.navbar -->
 
-        <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-blue-primary elevation-4">
-            <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
                     <img src="{{ asset('lte\dist\img\logo-chie-medical.png') }}" alt="ChieMedical Logo"
-                    class="brand-image img-circle elevation-1" style="opacity: 1">
+                    class="brand-image img-circle elevation-0" style="opacity: 1">
                 <span class="brand-text font-weight-bold">ChieMedical</span>
             </a>
 
-            <!-- Sidebar -->
             <div class="sidebar">
-                <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
                         <img src="{{ asset('lte/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2"
@@ -79,7 +128,6 @@
                     </div>
                 </div>
 
-                <!-- SidebarSearch Form -->
                 <div class="form-inline">
                     <div class="input-group" data-widget="sidebar-search">
                         <input class="form-control form-control-sidebar" type="search" placeholder="Search"
@@ -92,12 +140,9 @@
                     </div>
                 </div>
 
-                <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-                        with font-awesome or any other icon font library -->
                         @yield('nav-item')
                         <li class="nav-item">
                         <form action="{{ route('logout') }}" method="POST">
@@ -110,18 +155,13 @@
                         </li>
                     </ul>
                 </nav>
-                <!-- /.sidebar-menu -->
             </div>
-            <!-- /.sidebar -->
         </aside>
 
-        <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             @yield('content')
         </div>
-        <!-- /.content-wrapper -->
 
-        <!-- Main Footer -->
         <footer class="main-footer">
             @yield('footer')
             <strong>&copy; 2025 <a href="https://adminlte.io">ChieMedical</a>.</strong>

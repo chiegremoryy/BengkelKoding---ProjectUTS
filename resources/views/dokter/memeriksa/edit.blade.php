@@ -75,7 +75,7 @@
                     <div class="card-footer text-right">
                         <a href="{{ url('/dokter/memeriksa') }}" class="btn btn-secondary">Kembali</a>
                         <button type="submit" class="btn btn-primary">
-                            <i class="fa fa-save"></i> Update
+                            <i class="fa fa-save"></i>Update
                         </button>
                     </div>
                 </div>
@@ -83,7 +83,9 @@
         </div>
     </div>
 </section>
+
 @push('scripts')
+
 <script>
     const selectObat = document.getElementById('select-obat');
     const listObat = document.getElementById('obat-terpilih');
@@ -91,7 +93,7 @@
     const biayaPeriksaInput = document.getElementById('biaya-periksa');
     const biayaAwal = 150000;
 
-    const selectedObats = new Map(); // key = id, value = { nama, harga, kemasan }
+    const selectedObats = new Map();
 
     function renderObatTerpilih() {
         listObat.innerHTML = '';

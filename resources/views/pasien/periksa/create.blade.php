@@ -1,12 +1,10 @@
     <section class="content">
       <div class="container-fluid">
-        <!-- general form elements -->
         <div class="card card-primary">
               <div class="card-header">
                 <h3 class="card-title">Periksa</h3>
               </div>
-              <!-- /.card-header -->
-              <!-- form start -->
+
               <form action="{{ route('periksaCreate') }}" method="POST">
                 @csrf
                 <div class="card-body">
@@ -21,19 +19,17 @@
                         </select>
                     </div>
                 </div>
-                <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Create</button>
+                  <button type="submit" class="btn btn-primary">
+                    <i class="fa-solid fa-signature"></i> Buat Janji
+                  </button>
                 </div>
+                
                 </form>
         </div>
-            <!-- /.card -->
-          <!-- general form elements -->
 
-      <!-- /.container-fluid -->
-              <!-- /.card-header -->
-               <div class="row">
+              <div class="row">
               <div class="col-12">
               <div class="card card-primary">
               <div class="card-header">
@@ -69,4 +65,3 @@
             </div>
             </div>
     </section>
-    <!-- /.content -->
