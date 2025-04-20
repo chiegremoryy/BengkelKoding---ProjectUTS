@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="{{ asset('lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('lte/dist/css/adminlte.min.css') }}">
+  <link rel="icon" href="{{ asset('logo-chie-medical.png') }}" type="image/png">
 
   <style>
     body {
